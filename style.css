@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body,div {
+body,div,h2 {
 	margin: 0;
 	padding: 0;
 }
@@ -64,6 +64,7 @@ ul {
 	min-height: 600px;
 	height:100%;
 	background: green;
+	padding-top:3%;
 }
 /*フッター**************************************/
 footer {
@@ -85,17 +86,20 @@ footer {
 	width: 50px;
 	height: 50px;
 	margin-bottom: 25px;
-	border: 2px solid rgba(100,100,100,0.5);
+	border: 2px solid rgba(255,255,255,0.7);
 	border-radius: 50%;
 	text-align: center;
 	line-height: 50px;
-	color: rgba(100,100,100,0.5);
+	color: rgba(255,255,255,0.7);
 }
 .posi_nav ul li a {
 	text-decoration: none;
 }
 .posi_nav ul li a.b5 {
 	margin: 0;
+	font-size: 2em;
+	font-weight: borld;
+	line-height: 45px;
 }
 .posi_area>p.gotop{
 	margin: 0;
@@ -103,6 +107,10 @@ footer {
 	right: 3%;
 	bottom: 10%;
 	cursor: pointer;
+	font-size: 2.5em;
+	font-weight: borld;
+
+	
 }
 .posi_nav ul li a:hover,.posi_area>p.gotop:hover {
 	color: #fff;
