@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+body,div {
+	margin: 0;
+	padding: 0;
+}
+/*パディング・ボーダーを幅高さに含める*/
+a {
+	box-sizing: border-box;
+}
+/*テキストアラインセンター*/
+.align_center {
+	text-align: center;
+}
+/*クリアーフィックス*/
+.clear_fix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+/*タイトル文字*/
+header h1 {
+	color: #fff;
+	position: absolute;
+	right: 0;
+	left: 0;
+}
+
+.logo {
+	font-size: 50px;
+	margin-top: 30px;
+}
+.title {
+	font-size: 30px;
+	line-height: 100%;
+}
+
+/*メインナビ*/
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.main_nav ul li a{
+	display: block;
+	float: left;
+	width: 20%;
+	line-height: 40px;
+	font-size: 1.5em;
+	text-align: center;
+	text-decoration: none;
+	border-left: 2px solid #fff;
+	color: #fff;
+	background: rgba(100,100,100,0.5);
+}
+.main_nav ul li:first-child a{
+	border-left: none;
+}
+/*メインコンテンツ*******************************/
+.main>.container:nth-child(odd) {
+	background: grey;
+}
+.container {
+	min-height: 600px;
+	height:100%;
+	background: green;
+}
+/*フッター**************************************/
+footer {
+	height: 100px;
+	background: blue;
+}
+
+/*ポジションエリア****************************************/
+.posi_nav {
+	position: fixed;
+	left: 3%;
+	bottom: 10%;
+}
+.posi_nav ul {
+	list-style: none;
+}
+.posi_nav ul li a,.gotop {
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 25px;
+	border: 2px solid rgba(100,100,100,0.5);
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+	color: rgba(100,100,100,0.5);
+}
+.posi_nav ul li a {
+	text-decoration: none;
+}
+.posi_nav ul li a.b5 {
+	margin: 0;
+}
+.posi_area>p.gotop{
+	margin: 0;
+	position: fixed;
+	right: 3%;
+	bottom: 10%;
+	cursor: pointer;
+}
+.posi_nav ul li a:hover,.posi_area>p.gotop:hover {
+	color: #fff;
+	border: 3px solid #fff;
+}
