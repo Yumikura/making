@@ -1,4 +1,4 @@
 <?php
 	function h($v){
-		return 
+		return htmlspecialchars($v,ENT_QUOTES);
 	}

@@ -1,2 +1,18 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 
+body {
+	background: green;
+	color: #fff;
+}
+.container {
+	text-align: center;
+}
+.content {
+	background: grey;
+	width:65%;
+	margin: 0 auto 50px;
+	padding: 20px;
+}
+.content p {
+	margin-top: 30px;
+}
