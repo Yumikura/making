@@ -12,6 +12,10 @@ a {
 .align_center {
 	text-align: center;
 }
+/*imgの下隙間埋め*/
+img,iframe {
+	vertical-align: bottom;
+}
 /*クリアーフィックス*/
 .clear_fix:after {
 	content: "";
@@ -64,7 +68,24 @@ ul {
 	min-height: 600px;
 	height:100%;
 	background: green;
-	padding-top:3%;
+	padding-top:5%;
+}
+
+/*お問い合わせ*/
+#c5.container>.content {
+	margin: 0 auto;
+	width: 50%;
+}
+#c5.container>h2 {
+	margin-bottom: 50px;
+	font-size: 2em;
+	
+}
+
+#c5.container>.content p {
+	font: 18px borld;
+	line-height: 1.8em;
+	margin-bottom: 25px;
 }
 /*フッター**************************************/
 footer {
@@ -76,7 +97,7 @@ footer {
 .posi_nav {
 	position: fixed;
 	left: 3%;
-	bottom: 10%;
+	bottom: 20%;
 }
 .posi_nav ul {
 	list-style: none;
@@ -105,7 +126,7 @@ footer {
 	margin: 0;
 	position: fixed;
 	right: 3%;
-	bottom: 10%;
+	bottom: 20%;
 	cursor: pointer;
 	font-size: 2.5em;
 	font-weight: borld;
