@@ -70,16 +70,22 @@ ul {
 	background: green;
 	padding-top:5%;
 }
-
-/*お問い合わせ*/
-#c5.container>.content {
+/*コンテンツ共通*/
+.container>.content {
 	margin: 0 auto;
-	width: 50%;
 }
-#c5.container>h2 {
+.container>h2 {
 	margin-bottom: 50px;
 	font-size: 2em;
-	
+}
+/*アクセス*/
+#c4.container>.content iframe {
+	display: block;
+	margin: 0 auto;
+}
+/*お問い合わせ*/
+#c5.container>.content {
+	width: 50%;
 }
 
 #c5.container>.content p {
@@ -116,8 +122,7 @@ footer {
 .posi_nav ul li a {
 	text-decoration: none;
 }
-.posi_nav ul li a.b5 {
-	margin: 0;
+.posi_nav ul li a {
 	font-size: 2em;
 	font-weight: borld;
 	line-height: 45px;
