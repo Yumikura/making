@@ -34,7 +34,7 @@ $(function(){
 	}
 	
 	function getMenu(n,m){
-		$(eval("'.b"+n+"'")).hover(function(){
+		$(eval("'#b"+n+"'")).hover(function(){
 			var args = '<p id="up_menu">';
 			args += m;
 			args += '</p>'
