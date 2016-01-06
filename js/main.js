@@ -26,4 +26,22 @@ $(function(){
 	$('#gotop').click(function(){
 		$('body,html').animate({scrollTop: 0},1000,'swing');
 	});
+	//メニューボタンにホバーしたら文字が出る
+	
+	var menu_words = ['','news','menu2','menu3','accsess','contact','go home'];
+	for(var i=0; i<=6; i++){
+		getMenu(eval("'"+i+"'"),eval("'"+menu_words[i]+"'"));
+	}
+	
+	function getMenu(n,m){
+		$(eval("'.b"+n+"'")).hover(function(){
+			var args = '<p id="up_menu">';
+			args += m;
+			args += '</p>'
+			$(this).after(args);
+		},
+		function(){
+			$('p#up_menu').remove();
+		});
+	}
 });//end JQUERY

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body,div,h2 {
+body,div,h2,p {
 	margin: 0;
 	padding: 0;
 }
@@ -40,6 +40,9 @@ header h1 {
 }
 
 /*メインナビ*/
+main_nav {
+	text-align: center;
+}
 ul {
 	list-style: none;
 	margin: 0;
@@ -105,17 +108,17 @@ footer {
 	left: 3%;
 	bottom: 20%;
 }
-.posi_nav ul {
+.posi_nav ul,.gotop {
 	list-style: none;
+	text-align: center;
 }
 .posi_nav ul li a,.gotop {
 	display: block;
 	width: 50px;
 	height: 50px;
-	margin-bottom: 25px;
+	/*margin-bottom: 25px;*/
 	border: 2px solid rgba(255,255,255,0.7);
 	border-radius: 50%;
-	text-align: center;
 	line-height: 50px;
 	color: rgba(255,255,255,0.7);
 }
@@ -127,18 +130,27 @@ footer {
 	font-weight: borld;
 	line-height: 45px;
 }
-.posi_area>p.gotop{
-	margin: 0;
+.posi_nav ul li a {
+	font-size: 2em;
+	font-weight: borld;
+	line-height: 45px;
+}
+#gotop {
 	position: fixed;
 	right: 3%;
 	bottom: 20%;
 	cursor: pointer;
-	font-size: 2.5em;
-	font-weight: borld;
-
-	
 }
-.posi_nav ul li a:hover,.posi_area>p.gotop:hover {
+p.gotop{
+	font-size: 2.5em;
+	font-weight: borld;	
+}
+.posi_nav ul li a:hover,p.gotop:hover {
 	color: #fff;
 	border: 3px solid #fff;
+}
+.memu_button {
+	height: 80px;
+	font: 1em borld;
+	color: #fff;
 }
