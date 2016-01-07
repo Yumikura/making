@@ -28,7 +28,7 @@ $(function(){
 	});
 	//メニューボタンにホバーしたら文字が出る
 	
-	var menu_words = ['','news','menu2','menu3','accsess','contact','go home'];
+	var menu_words = ['','news','sport<br>boules','calendar','accsess','contact','go home'];
 	for(var i=0; i<=6; i++){
 		getMenu(eval("'"+i+"'"),eval("'"+menu_words[i]+"'"));
 	}

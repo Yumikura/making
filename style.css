@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body,div,h1,h2,p {
+body,div,h1,h2,h3,p {
 	margin: 0;
 	padding: 0;
 }
@@ -80,15 +80,51 @@ ul {
 /*コンテンツ共通*/
 .container>.content {
 	margin: 0 auto;
+	width:75%;
 }
-.container>h2 {
-	margin-bottom: 50px;
+.content h2 {
+	margin-bottom: 30px;
 	font-size: 2em;
 }
+.content h3 {
+	font-size: 1em;
+	margin: 10px 0;
+	padding: 5px 10px;
+	border-left: 5px solid;
+	border-bottom: 2px solid; 
+}	
+.content p {
+	font-size: 16px;
+	line-height: 1.5em;
+}
+/*NEWS*/
+.news_content {
+	width: 95%;
+	margin: 20px auto
+}
+.news_content img {
+	display: block;
+	margin-right: 20px;
+}
+.past_news {
+	background: #fff;
+	width: 70%;
+}
 /*アクセス*/
+#c4.container>.content {
+	width: 65%;
+	padding-bottom: 30px;
+}
+#c4.container>.content p,#c4.container>.content ul li {
+	margin-left: 2em;
+	line-height: 1.5em;
+}
+#c4.container>.content p:nth-child(4) {
+	margin-bottom: 20px;
+}
 #c4.container>.content iframe {
 	display: block;
-	margin: 0 auto;
+	border-radius: 30px;
 }
 /*お問い合わせ*/
 #c5.container>.content {
@@ -154,7 +190,7 @@ p.gotop{
 	border: 3px solid #fff;
 }
 .memu_button {
-	height: 80px;
+	height: 85px;
 	font: 1em borld;
 	color: #fff;
 }
