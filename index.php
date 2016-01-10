@@ -1,6 +1,7 @@
 <?php
 	include_once "./functions.php";
-	
+	$sql1 =  $dbh->query("SELECT * FROM news_posts ORDER BY id DESC LIMIT 1");
+	$sql = $dbh->query("SELECT * FROM news_posts ORDER BY id DESC LIMIT 1,5");
 	$dbh = null;
 ?>
 <!DOCTYPE html>
@@ -40,7 +41,7 @@
 	</div>
 	<header>
 		<div class="main_vis">
-			<h1 class="logo align_center">LOGO</h1>
+			<h1 class="logo align_center"><img src="./img/logo_w.png" alt="logo" width="15%"></h1>
 			<h1 class="title align_center">THIS IS MAIN MESSAGE</h1>
 			<img src="http://placeimg.com/640/480/nature" alt="" width="100%" height="600">
 		</div>
@@ -62,41 +63,38 @@
 					<h3>最新NEWS</h3>
 					<div class="news_content">
 						<p><img src="http://placeimg.com/640/480/nature" alt="" width="40%" height="300" align="left"></p>
-						<h4>最新NEWSタイトル</h4>
-						<p>猫はゴムのかっこうゴーシュ汁をあとであいなんどました。するといきなりいい気んましというかっこうですござい。
-
-生意気だろたんなはたいや包みの上手団のところをはぶるぶる残念でまして、おまえまであとをありれんでします。
-
-ふくすぎ何は集りでないましてさっきの間のこどもらにし第三ひとり弾のかっかで立っがやっだだら。ゴーシュは前まげてだしな。曲は二云い野ねずみのようとあわせて行くた。血はゴーシュ猫とみんなでしていまし。
-
-外もばかからひっそりに弾きてかぶれがゴーシュのようのもぐり込みて窓が入ってやっと手を云いて来だ。そっとやはり泪を蚊をたべるたた。いつしばらくに曲をして人にちがいたまし。ゴーシュが起きあがっましませ。
-<br clear="all">
+						<?php foreach($sql1 as $row): ?>
+						<h4><?php echo $row['title']; ?></h4>
+						<h5>投稿日時：<?php echo $row['date']; ?></h5>
+						<p><?php echo $row['content']; ?></p>
+						<?php endforeach; ?>
+						<p><br clear="all">
 						</p>
 					</div>
 				</section>
 				<table class="past_news">
 					<h3>バックナンバー</h3>
+					<?php foreach($sql as $row): ?>
 					<tr>
-						<td>タイトル</td><td>15年1月7日</td><td>コンテンツコンテンツコンテンツ</td>
+						<td><a href="./news.php"><?php echo $row['title']; ?></td><td><?php echo $row['date']; ?></td><td><?php echo $row['content']; ?></a></td>
 					</tr>
-					<tr>
-						<td>タイトル</td><td>15年1月7日</td><td>コンテンツコンテンツコンテンツ</td>
-					</tr>
-					<tr>
-						<td>タイトル</td><td>15年1月7日</td><td>コンテンツコンテンツコンテンツ</td>
-					</tr>
+					<?php endforeach; ?>
 				</table>
 			</div>
 		</div>
 		<div id="c2" class="container">
 			<div class="content">
 				<h2>スポールブールについて<h2>
+				<h3>スポールブールとは？</h3>
+				<p></p>
+				<h3>スポールブールは本気になれるスポーツです！</h3>
+				<p></p>
 			</div>
 		</div>
 		<div id="c3" class="container">
-			<div class="content">
+			<div class="content align_center">
 				<h2>イベントカレンダー</h2>
-			</div>
+<iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=1&amp;bgcolor=%233333ff&amp;src=uqnt1rqkn5j5nc4sjs4f37htr8%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=Asia%2FTokyo" style="border:solid 1px #777" width="800" height="500" frameborder="0" scrolling="no"></iframe>			</div>
 		</div>
 		<div id="c4" class="container">
 			<div class="content">
@@ -114,8 +112,8 @@
 			</div>
 		</div>
 		<div id="c5" class="container">
-			<div class="content">
 				<h2 class="sub_title align_center">お問い合わせ</h2>
+			<div class="content">
 				<form action="./admin/confirm.php" method="post">
 					<p><label for="nam">お名前　</label><br>
 					<input type="text" name="name" size="30" id="num" placeholder="お名前をご記入下さい" required>
