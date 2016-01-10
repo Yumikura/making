@@ -1,7 +1,8 @@
 <?php
 	include_once "./functions.php";
-	$sql1 =  $dbh->query("SELECT * FROM news_posts ORDER BY id DESC LIMIT 1");
 	$sql = $dbh->query("SELECT * FROM news_posts ORDER BY id DESC LIMIT 1,5");
+	$sql1 =  $dbh->query("SELECT * FROM news_posts ORDER BY id DESC LIMIT 1");
+	$sql2 =  $dbh->query("SELECT * FROM year_schedule ORDER BY date");
 	$dbh = null;
 ?>
 <!DOCTYPE html>
@@ -42,8 +43,15 @@
 	<header>
 		<div class="main_vis">
 			<h1 class="logo align_center"><img src="./img/logo_w.png" alt="logo" width="15%"></h1>
-			<h1 class="title align_center">THIS IS MAIN MESSAGE</h1>
+			<div class="title">
+				<h1 class="main_title align_center">もう一度、スポーツに真剣に向き合ってみませんか？</h1>
+				<h2 class="sub_title align_center">〓日本代表に最も近い球技スポールブール〓</h2>
+			</div>
 			<img src="http://placeimg.com/640/480/nature" alt="" width="100%" height="600">
+			<div class="bottom_title clear_fix">
+				<h2 class="b_title1">スポールブール大阪支部　Boules-Sports OSAKA</h2>　 
+				<h2 class="b_title2 align_center">選手募集中!!</h2>
+			</div>
 		</div>
 		<nav class="main_nav clear_fix">
 			<ul>
@@ -62,11 +70,11 @@
 				<section class="resent_news">
 					<h3>最新NEWS</h3>
 					<div class="news_content">
-						<p><img src="http://placeimg.com/640/480/nature" alt="" width="40%" height="300" align="left"></p>
+						<p><img src="./img/news_photo/20150919.jpg" alt="" width="40%" height="300" align="left"></p>
 						<?php foreach($sql1 as $row): ?>
 						<h4><?php echo $row['title']; ?></h4>
-						<h5>投稿日時：<?php echo $row['date']; ?></h5>
-						<p><?php echo $row['content']; ?></p>
+						<h5><?php echo $row['date']; ?></h5>
+						<p><?php echo nl2br($row['content']); ?></p>
 						<?php endforeach; ?>
 						<p><br clear="all">
 						</p>
@@ -76,7 +84,7 @@
 					<h3>バックナンバー</h3>
 					<?php foreach($sql as $row): ?>
 					<tr>
-						<td><a href="./news.php"><?php echo $row['title']; ?></td><td><?php echo $row['date']; ?></td><td><?php echo $row['content']; ?></a></td>
+						<td><a href="./news.php"><?php echo $row['title']; ?></td><td><?php echo $row['date']; ?></td><td><?php echo mb_substr($row['content'],0,20); ?>…</a></td>
 					</tr>
 					<?php endforeach; ?>
 				</table>
@@ -85,30 +93,47 @@
 		<div id="c2" class="container">
 			<div class="content">
 				<h2>スポールブールについて<h2>
-				<h3>スポールブールとは？</h3>
+				<h3>世界最古の球技スポールブール</h3>
 				<p></p>
-				<h3>スポールブールは本気になれるスポーツです！</h3>
+				<p></p>
+				<h3>社会人でも日本代表を目指せるスポーツです</h3>
 				<p></p>
 			</div>
 		</div>
 		<div id="c3" class="container">
-			<div class="content align_center">
-				<h2>イベントカレンダー</h2>
-<iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=1&amp;bgcolor=%233333ff&amp;src=uqnt1rqkn5j5nc4sjs4f37htr8%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=Asia%2FTokyo" style="border:solid 1px #777" width="800" height="500" frameborder="0" scrolling="no"></iframe>			</div>
+			<div class="content">
+				<h2 class="align_center">イベントカレンダー</h2>
+				<iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=1&amp;bgcolor=%233333ff&amp;src=uqnt1rqkn5j5nc4sjs4f37htr8%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=Asia%2FTokyo" style="border:solid 1px #777" width="52%" height="450" frameborder="0" scrolling="no"></iframe>
+				<div class="year_schedule">
+				<h4 class="align_center">年間スケジュール</h4>
+				<table>
+					<?php foreach($sql2 as $row): ?>
+					<tr>
+						<td><?php echo $row['date_w']; ?></td>
+						<td> <?php echo $row['plan']; ?></td>
+					</tr>
+					<?php endforeach; ?>
+				</table>
+				</div>
+			</div>
 		</div>
 		<div id="c4" class="container">
-			<div class="content">
-			<h2 class="sub_title align_center">練習場所へのアクセス</h2>
-			<p>大阪北エリアのの扇町公園にて土日どちらかの午前中に練習を行っています。</p>
-			<p><a href="#c3">練習日程はイベントカレンダーを参照下さい</a></p>
-			<p><a href="#c5">見学をご希望の方はお気軽に連絡ください</a></p>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4638.774664874741!2d135.50588746247797!3d34.702430045821664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x6e9125ed03ad05f9!2z5omH55S65YWs5ZyS!5e0!3m2!1sja!2sjp!4v1451979725890" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-			<h3>扇町公園へのアクセス</h3>
-			<ul>
-				<li>大阪市営地下鉄堺筋線扇町駅より徒歩1分</li>
-				<li>JR西日本大阪環状線天満駅より徒歩4分</li>
-				<li>大阪梅田からも徒歩圏内です（徒歩15～18分程度）</li>
-			</ul>
+			<div class="content clear_fix">
+				<h2 class="sub_title align_center">練習場所へのアクセス</h2>
+				<div class="accsess_p">
+					<p>大阪北エリアのの扇町公園にて土日どちらかの午前中に練習を行っています。</p>
+					<p><a href="#c3">練習日程はイベントカレンダーを参照下さい</a></p>
+					<p><a href="#c5">見学をご希望の方はお気軽に連絡ください</a></p>
+					<h3>扇町公園へのアクセス</h3>
+					<ul>
+						<li>大阪市営地下鉄堺筋線扇町駅より徒歩1分</li>
+						<li>JR西日本大阪環状線天満駅より徒歩4分</li>
+						<li>大阪梅田からも徒歩圏内です（徒歩15～18分程度）</li>
+					</ul>
+					<h4>扇町公園</h4>
+					<p>大阪府大阪市北区扇町１丁目１</p>
+				</div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4638.774664874741!2d135.50588746247797!3d34.702430045821664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x6e9125ed03ad05f9!2z5omH55S65YWs5ZyS!5e0!3m2!1sja!2sjp!4v1451979725890" width="50%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 		</div>
 		<div id="c5" class="container">
@@ -126,7 +151,7 @@
 			</div>
 		</div>
 		<footer>
-			<small>Copyright &copy; 2016 ○○○○ All Rights Reserved.</small>
+			<small class="align_center">Copyright &copy; 2016 boule-sports OSAKA All Rights Reserved.</small>
 		</footer>
 	</div>
 </body>
