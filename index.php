@@ -47,9 +47,7 @@
 				<h1 class="main_title align_center">もう一度、スポーツに真剣に向き合ってみませんか？</h1>
 				<h2 class="sub_title align_center">〓日本代表に最も近い球技スポールブール〓</h2>
 			</div>
-			<img src="http://placeimg.com/640/480/nature" alt="" width="100%" height="600">
-			<div class="bottom_title clear_fix">
-				<h2 class="b_title1">スポールブール大阪支部　Boules-Sports OSAKA</h2>　 
+			<iframe width="100%" height="600" src="https://www.youtube.com/embed/60TdSuHk3ok?autoplay=1" frameborder="0" allowfullscreen></iframe>				<h2 class="b_title1">スポールブール大阪支部　Boules-Sports OSAKA</h2>　 
 				<h2 class="b_title2 align_center">選手募集中!!</h2>
 			</div>
 		</div>
@@ -92,10 +90,19 @@
 		</div>
 		<div id="c2" class="container">
 			<div class="content">
-				<h2>スポールブールについて<h2>
-				<h3>世界最古の球技スポールブール</h3>
-				<p></p>
-				<p></p>
+				<h2>スポールブールについて</h2>
+				<div class="clear_fix">
+				<h3>スポールブールとは？</h3>
+					<div class="c2_1p">
+						<p>対戦型の球技で、ボールを転がす技術・投げる技術を駆使し、どちらがより多くのボールを目標地点に近づけられるかを競うスポーツです。ボールは1kg程度で人の拳二つ分程度大きさの金属球を用います。競技フィールドはおよそ30m×4mの砂地で行います。ときにボールを転がして数十cmの隙間通す繊細さが、また約15mもの距離を金属球が放物線を描き激しい衝突音を鳴り響かせるダイナミックさが、多くの人々を魅了しており、なんと50ヶ国以上の国で行われています。</p>
+						<p><a href="">ルール等詳しい説明はこちら</a></p>
+					</div>
+					<figure class="c2_1i">
+						<img src="./img/borl.jpg" art="borl" width="100%">
+						<figcaption>使用するボール<br>
+						直径約10cm重さ約1㎏程度</figcaption>
+					</figure>
+				</div>
 				<h3>社会人でも日本代表を目指せるスポーツです</h3>
 				<p></p>
 			</div>
