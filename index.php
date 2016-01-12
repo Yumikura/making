@@ -1,6 +1,8 @@
 <?php
 	include_once "./functions.php";
 	
+	$stmt = $dbh->query("SELECT * FROM news_posts ORDER BY date DESC LIMIT 5");
+	
 	$dbh = null;
 ?>
 <!DOCTYPE html>
@@ -76,14 +78,12 @@
 				</section>
 				<table class="past_news">
 					<h3>バックナンバー</h3>
+					<?php foreach($stmt as $row): ?>
 					<tr>
-						<td>タイトル</td><td>15年1月7日</td><td>コンテンツコンテンツコンテンツ</td>
-					</tr>
-					<tr>
-						<td>タイトル</td><td>15年1月7日</td><td>コンテンツコンテンツコンテンツ</td>
-					</tr>
-					<tr>
-						<td>タイトル</td><td>15年1月7日</td><td>コンテンツコンテンツコンテンツ</td>
+						<td><?php $row["title"] ?></td>
+						<td><?php $row["date"] ?></td>
+						<td><?php $row["content"] ?></td>
+						<?php endforeach; ?>
 					</tr>
 				</table>
 			</div>
