@@ -51,8 +51,13 @@
 				<h2 class="sub_title align_center">〓日本代表に最も近い球技スポールブール〓</h2>
 			</div>
 			<div class="movie_wrap">
-			<iframe width="960" height="720" src="https://www.youtube.com/embed/_5fbJs2v1eQ?rel=0&autoplay=1&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+			<iframe width="853" height="480" src="https://www.youtube.com/embed/LyEb2y4jSig?rel=0&autoplay=1&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 			</div>
+			<!--<div class="video_wrap">
+			<video autoplay loop poster="" width="100%">
+				<source src="./videos/Sport Boules.mp4">
+			</video>
+			</div>-->
 			<div class="bottom_title">
 				<h2 class="b_title1">スポールブール大阪支部　Boules-Sports OSAKA</h2>
 				<h2 class="b_title2 align_center">選手募集中!!</h2>
