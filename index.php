@@ -66,7 +66,7 @@
 		<nav class="main_nav clear_fix">
 			<ul>
 				<li><a class="b1" href="#c1">NEWS</a></li>
-				<li><a class="b2" href="#c2">menu2</a></li>
+				<li><a class="b2" href="#c2">スポールブールとは</a></li>
 				<li><a class="b3" href="#c3">イベントカレンダー</a></li>
 				<li><a class="b4" href="#c4">アクセス</a></li>
 				<li><a class="b5" href="#c5">お問い合わせ</a></li>
@@ -80,7 +80,7 @@
 				<section class="resent_news">
 					<h3>最新NEWS</h3>
 					<div class="news_content">
-						<p><img src="./img/news_photo/20150919.jpg" alt="" width="40%" height="300" align="right"></p>
+						<p><img src="./img/news_photo/20150919.jpg" alt="" width="40%" align="right"></p>
 						<?php foreach($sql1 as $row): ?>
 						<h4><?php echo $row['title']; ?></h4>
 						<h5><?php echo $row['date']; ?></h5>
@@ -113,7 +113,7 @@
 					<div class="c2_1p">
 						<h3>スポールブールとは？</h3>
 						<p>対戦型の球技で、ボールを転がす技術・投げる技術を駆使し、どちらがより多くのボールを目標地点に近づけられるかを競うスポーツです。ボールは1kg程度で人の拳二つ分程度大きさの金属球を用います。競技フィールドはおよそ30m×4mの砂地で行います。ときにボールを転がして数十cmの隙間通す繊細さが、また約15mもの距離を金属球が放物線を描き激しい衝突音を鳴り響かせるダイナミックさが、多くの人々を魅了しており、なんと50ヶ国以上の国で行われています。</p>
-						<p><a href="">ルール等詳しい説明はこちら</a></p>
+						<!--<p><a href="">ルール等詳しい説明はこちら</a></p>-->
 					</div>
 					<figure class="c2_1i">
 						<img src="./img/borl.jpg" art="borl" width="90%">
@@ -142,7 +142,7 @@
 			</div>
 		</div>
 		<div id="c3" class="container">
-			<div class="content">
+			<div class="content clearfix">
 				<h2 class="align_center">イベントカレンダー</h2>
 				<iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=1&amp;bgcolor=%233333ff&amp;src=uqnt1rqkn5j5nc4sjs4f37htr8%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=Asia%2FTokyo" style="border:solid 1px #777" width="52%" height="450" frameborder="0" scrolling="no"></iframe>
 				<div class="year_schedule">
